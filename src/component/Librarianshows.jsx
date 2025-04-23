@@ -17,7 +17,7 @@ useEffect(() => {
   },[]);
     const deleteitem = async(id) => {
         console.log(id);
-        const api = await axios.delete(`http://localhost:1000/api/books/deletebook/${id}`,
+        const api = await axios.delete(`https://book-haven-api-ehpu.onrender.com/api/books/deletebook/${id}`,
             {
                 headers: {
                   'Content-Type': 'application/json',
