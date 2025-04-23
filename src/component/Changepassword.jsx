@@ -13,7 +13,7 @@ const Changepassword = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:1000/api/users/change", {
+      const response = await axios.post("https://book-haven-api-ehpu.onrender.com/api/users/change", {
         email,
         otpCode,
         password: newPassword,
