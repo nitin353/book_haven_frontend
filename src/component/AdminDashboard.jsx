@@ -75,7 +75,7 @@ const AdminDashboard = () => {
   const handleApproveTransaction = async (transactionId) => {
     let token=localStorage.getItem("token")
     try {
-      const response = await fetch(`http://localhost:1000/api/transaction/approved/${transactionId}`, {
+      const response = await fetch(`https://book-haven-api-ehpu.onrender.com/api/transaction/approved/${transactionId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
