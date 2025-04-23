@@ -19,7 +19,7 @@ const AppState = (props) => {
     console.log("name, email, password , stream", name, email, password,stream);
     try {
         console.log("enter try")
-      const api = await axios.post('http://localhost:1000/api/users/sign-up', 
+      const api = await axios.post('https://book-haven-api-ehpu.onrender.com/api/users/sign-up', 
         { name, email,stream, password },
         {
           headers: {
@@ -53,7 +53,7 @@ const AppState = (props) => {
 const login = async ( email, password) => {
     console.log("name, email, password", email, password);
     try {
-      const api = await axios.post('http://localhost:1000/api/users/sign-In', 
+      const api = await axios.post('https://book-haven-api-ehpu.onrender.com/api/users/sign-In', 
         {  email, password },
         {
           headers: {
@@ -82,7 +82,7 @@ const login = async ( email, password) => {
   };
 
   const contact = async (name,email,phone,message)=>{
-    const api = await axios.post("http://localhost:1000/api/contact/conn", {name,email,phone,message},
+    const api = await axios.post("https://book-haven-api-ehpu.onrender.com/api/contact/conn", {name,email,phone,message},
     {
       headers:{
         'content-Type': 'Application/json'
@@ -94,7 +94,7 @@ const login = async ( email, password) => {
   }
   const AddBook = async (formData)=>{
     console.log("token", token)
-    const api = await axios.post("http://localhost:1000/api/books/addbook", formData,
+    const api = await axios.post("https://book-haven-api-ehpu.onrender.com/api/books/addbook", formData,
     {
       headers: {
         "Content-Type": "multipart/form-data",
@@ -110,7 +110,7 @@ const login = async ( email, password) => {
   return api.data;
   }
   const showbooks = async () => {
-    const api = await axios.get("http://localhost:1000/api/books/showbooks", {
+    const api = await axios.get("https://book-haven-api-ehpu.onrender.com/api/books/showbooks", {
       headers: {
         'Content-Type': 'Application/json',
       },
@@ -127,7 +127,7 @@ const login = async ( email, password) => {
     console.log("bookId   = ", bookId);
     console.log("dueDate  = ", dueDate);
     // console.log("userId    = ", userId );
-    const userResponse = await axios.get("http://localhost:1000/api/users/getUser", {
+    const userResponse = await axios.get("https://book-haven-api-ehpu.onrender.com/api/users/getUser", {
       headers: {
         Auth:token,
       },
@@ -137,7 +137,7 @@ const login = async ( email, password) => {
     });
 
     const userId = userResponse.data.user.userid; 
-    const api = await axios.post("http://localhost:1000/api/transaction/borrow", {bookId, dueDate , userId },
+    const api = await axios.post("https://book-haven-api-ehpu.onrender.com/api/transaction/borrow", {bookId, dueDate , userId },
       {
         headers:{
           "Content-Type":"Application/json",
@@ -154,7 +154,7 @@ const login = async ( email, password) => {
 
   }
   const Allusers = async () => {
-    const api = await axios.get("http://localhost:1000/api/users/allusers");
+    const api = await axios.get("https://book-haven-api-ehpu.onrender.com/api/users/allusers");
   //  
    // Pass only the data part of the response
    console.log("all users======",api.data)
@@ -162,7 +162,7 @@ const login = async ( email, password) => {
   //  setFilterData(api.data.data)
   };
   const AlltransactionUsers = async () => {
-    const api = await axios.get("http://localhost:1000/api/transaction/transactions");
+    const api = await axios.get("https://book-haven-api-ehpu.onrender.com/api/transaction/transactions");
   //  
    // Pass only the data part of the response
    console.log("all Trasanctionusers======---",api.data)
@@ -177,7 +177,7 @@ const getUserData = async ()=> {
   console.log("gat user data call")
   const mytoken=localStorage.getItem("token");
   console.log(mytoken)
-  const api = await axios.get("http://localhost:1000/api/users/getUser",
+  const api = await axios.get("https://book-haven-api-ehpu.onrender.com/api/users/getUser",
     {
       headers:{
         "Content-Type":"Application/json",
