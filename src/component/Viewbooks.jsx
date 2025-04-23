@@ -65,7 +65,7 @@ const Viewbooks = () => {
 
             <div className="row border shadow p-5">
                 <div className="col-md-5 text-center">
-                    <img style={{ height: "438px", width: "320px" }} src={`http://localhost:1000/${book.image}`} alt={book.title} />
+                    <img style={{ height: "438px", width: "320px" }} src={`https://book-haven-api-ehpu.onrender.com/${book.image}`} alt={book.title} />
                 </div>
                 <div className="col-md-7">
                     <h3>{book.title}</h3><br />
