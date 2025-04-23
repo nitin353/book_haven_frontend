@@ -13,7 +13,7 @@ const Viewbooks = () => {
     useEffect(() => {
         const fetchBook = async () => {
             try {
-                const api = await axios.get(`http://localhost:1000/api/books/getbookbyid/${id}`, {
+                const api = await axios.get(`https://book-haven-api-ehpu.onrender.com/api/books/getbookbyid/${id}`, {
                     headers: { 'Content-Type': 'application/json' },
                     withCredentials: true,
                 });
