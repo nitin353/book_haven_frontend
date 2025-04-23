@@ -7,7 +7,7 @@ const Forget = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const url = "http://localhost:1000/api/users/otp"; // API endpoint
+  const url = "https://book-haven-api-ehpu.onrender.com/api/users/otp"; // API endpoint
 
   const handleSubmit = async (e) => {
     e.preventDefault();
