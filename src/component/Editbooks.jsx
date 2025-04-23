@@ -28,7 +28,7 @@ const Editbooks = () => {
     const fetchBookDetails = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:1000/api/books/getbookbyid/${id}`,
+          `https://book-haven-api-ehpu.onrender.com/api/books/getbookbyid/${id}`,
           {
             headers: {
               "Content-Type": "application/json",
