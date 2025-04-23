@@ -15,7 +15,7 @@ const UserProfile = () => {
     if (!issuedBook?.length && userData?.userid) {
       const fetchBorrowedBooks = async () => {
         try {
-          const response = await axios.get(`http://localhost:1000/api/transaction/borrowed/${userData.userid}`, {
+          const response = await axios.get(`https://book-haven-api-ehpu.onrender.com/api/transaction/borrowed/${userData.userid}`, {
             headers: {
               "Content-Type": "application/json",
             },
