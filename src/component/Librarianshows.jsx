@@ -96,7 +96,7 @@ useEffect(() => {
     <tr  key={i._id}>
       <th scope="row"> {index + 1}</th>
       <td>{i.title}</td>
-      <td><img style={{height:"90px"}} src={`http://localhost:1000/${i.image}`}></img></td>
+      <td><img style={{height:"90px"}} src={`https://book-haven-api-ehpu.onrender.com/${i.image}`}></img></td>
       <td>{i.author}</td>
       <td>{i.isbn}</td>
       <td>{i.category}</td>
