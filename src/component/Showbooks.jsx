@@ -141,7 +141,7 @@ const Showbooks = () => {
                   <div className="card-body">
                     <img
                       style={{ height: "200px", objectFit: "cover", borderRadius: "8px" }}
-                      src={`http://localhost:1000/${book.image}`}
+                      src={`https://book-haven-api-ehpu.onrender.com/${book.image}`}
                       alt={book.title}
                     />
                     <p style={{ paddingTop: "20px", color: "gray", fontSize: "18px", fontWeight: "bold" }}>
